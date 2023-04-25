@@ -1,0 +1,12 @@
+services:
+  postgresql:
+    #image: postgres:14-alpine
+    image: bitnami/postgresql:14
+    labels:
+      org.springframework.boot.service-connection: postgres
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_DB: demo
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
